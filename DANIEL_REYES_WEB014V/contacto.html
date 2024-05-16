@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como llegar</title>
+    <link rel="icon" href="img/galeria.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="contacto.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body onload="mostrarSoldaduras()">
+     <!--Inicio del Menu-->
+     <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-succes">
+            <div class="container-fluid" style="margin-left: -10px">
+                <!--logo-->
+                <a class="navbar-brand" href="#">
+                    <img src="img/solda.jpg" width="80px" height="80px">
+                    <span class="text-warning">Soldaduras Especiales</span>
+                </a>
+                <!--boton del menu-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  
+                    data-bs-target="#menu" aria-controls="navbarSupportedContent"  
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation" style="margin-right: -20px; margin-left: -30px;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--elementos del menu colapsable-->
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Quienes Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="materiales.html">Materiales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galeria.html">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="registro.html">Usuario</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--PORTADA-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg col-md d-flex justify-content-center align-items-center">
+                <img src="img/logo.jpg" class="portada" alt="logo">
+            </div>
+        </div>
+    </div>
+    <!--Como llegar-->
+    <div class="como-llegar">
+        <h2 class="titulo-llegar">¿Como llegar?</h2>
+    </div>
+    <!--Feriados-->
+    <div class="d-flex justify-content-center" style="margin: 10px">
+        <a href="feriados.html" class="btn btn-primary">Feriados 2024!!</a>
+    </div>
+    <!--Link ubicacion-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg col-md d-flex justify-content-center align-items-center ubicacion">
+                <a href="https://maps.app.goo.gl/paS4iYVQya9oYXLKA" target="_blank">
+                    <i class="bi bi-geo-alt"></i>
+                    <p>Santa Amanda 910 (Al fondo del pasaje) / Horario: 10:00am - 18:00pm</p>    
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--Google Maps-->
+    <div class="col-lg col-md d-flex justify-content-center align-items-center google-maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.1010298025326!2d-70.7461033!3d-33.4987485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c336a93ea75b%3A0x5e7ff019bc20cd5!2sSta.%20Amanda%20914%2C%20Maip%C3%BA%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1712556511456!5m2!1ses-419!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!--Contactanos-->
+    <h2 class="text-warning" style="text-align: center;">Formulario de contacto</h2>
+    <hr>
+    <div class="col-lg col-md contactanos " style="display: flex; justify-content: center;">
+        <form id="datos-contactos" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <label for="nom">Nombres:</label>
+            <input type="text" id="nom" name="nom" class="form-control" required minlength="3" required>
+    
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" class="form-control" required minlength="3" required>
+    
+            <label for="correo">E-mail:</label>
+            <input type="email" id="correo" name="correo" placeholder="Ej: micorreo@ejemplo.com" class="form-control" required>
+    
+            <label for="telefono">Telefono: </label>
+            <input type="text" id="telefono" name="telefono" placeholder="Ingrese su teléfono.." class="form-control" required minlength="9" maxlength="11">
+    
+            <label for="empresa">Empresa:</label>
+            <input type="text" id="empresa" name="empresa" class="form-control" placeholder="(Opcional)">
+
+            <label for="cargo">Cargo:</label>
+            <input type="text" id="cargo" name="cargo" class="form-control" placeholder="(Opcional)">
+
+            <label for="mensaje">Escriba su mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" class="form-control" required></textarea>
+    
+            <button class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+    <!--Soldaduras json-->
+    <div class="col-lg col-md" id="soldadurasApi" >
+        <hr>
+        <h2 class="text-warning" style="font-weight: bold; display: flex; justify-content: center;">Soldaduras Realizadas</h2>
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>TIPO</th>
+                    <th>MATERIAL</th>
+                    <th>APLICACION</th>
+                </tr>
+            </thead>
+            <tbody id="soldApi"></tbody>
+        </table>
+        <hr>
+    </div>
+    <!--Pie de la pagina-->
+    <footer class="oscuro d-flex flex-column align-items-center justify-content-center">
+        <img src="img/footer-logo.jpg" class="footer-logo" alt="logo de footer">
+        <p class="oscuro footer-texto text-center">Contactanos en las siguientes <br>redes sociales.</p>
+        <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+            <a href="https://www.facebook.com/soldadurasespecialesmaipu" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/soldadurasespeciales_maipu/" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="mailto:Camilourra.1992@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-envelope"></i>
+            </a>
+        </div>
+        <div class="derechos">Soldaduras Especiales 2024 &#169;</div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+    <script src="js/soldadurasApi.js"></script>
+    <script src="js/validacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+{
+    "soldaduras": [
+       {
+          "id": "1",
+          "tipo": "Soldadura por arco sumergido",
+          "material": "Acero estructural",
+          "aplicacion": "Construcción de puentes peatonales"
+       },
+       {
+          "id": "2",
+          "tipo": "Soldadura TIG",
+          "material": "Acero al carbono",
+          "aplicacion": "Reparación de tuberías de gas en planta industrial"
+       },
+       {
+          "id": "3",
+          "tipo": "Soldadura MIG",
+          "material": "Acero inoxidable",
+          "aplicacion": "Fabricación de tanques de almacenamiento para productos químicos"
+       },
+       {
+          "id": "4",
+          "tipo": "Soldadura por arco sumergido",
+          "material": "Acero galvanizado",
+          "aplicacion": "Montaje de estructuras metálicas para parques eólicos"
+       },
+       {
+          "id": "5",
+          "tipo": "Soldadura de electrodo revestido (SMAW)",
+          "material": "Hierro fundido",
+          "aplicacion": "Reparación de equipos de maquinaria pesada en mina"
+       },
+       {
+          "id": "6",
+          "tipo": "Soldadura MIG",
+          "material": "Acero galvanizado",
+          "aplicacion": "Construcción de barandas de seguridad para balcones en edificios residenciales"
+       },
+       {
+          "id": "7",
+          "tipo": "Soldadura por puntos",
+          "material": "Acero al carbono",
+          "aplicacion": "Ensamblaje de componentes metálicos para fabricación de automóviles"
+       },
+       {
+          "id": "8",
+          "tipo": "Soldadura TIG",
+          "material": "Acero estructural",
+          "aplicacion": "Soldadura de estructuras metálicas para parques de diversiones"
+       },
+       {
+          "id": "9",
+          "tipo": "Soldadura MIG",
+          "material": "Acero naval",
+          "aplicacion": "Fabricación de contenedores para transporte marítimo"
+       },
+       {
+          "id": "10",
+          "tipo": "Soldadura por fusión de enchufe",
+          "material": "Polietileno de alta densidad (HDPE)",
+          "aplicacion": "Reparación de tuberías de agua potable en planta de tratamiento"
+       },
+       {
+          "id": "11",
+          "tipo": "Soldadura TIG",
+          "material": "Aluminio",
+          "aplicacion": "Construcción de estructuras para la industria aeroespacial"
+       },
+       {
+          "id": "12",
+          "tipo": "Soldadura por arco sumergido",
+          "material": "Acero inoxidable",
+          "aplicacion": "Fabricación de recipientes a presión para la industria alimentaria"
+       },
+       {
+          "id": "13",
+          "tipo": "Soldadura MIG",
+          "material": "Aluminio",
+          "aplicacion": "Reparación de carrocerías de vehículos de transporte"
+       },
+       {
+          "id": "14",
+          "tipo": "Soldadura de electrodo revestido (SMAW)",
+          "material": "Acero al carbono",
+          "aplicacion": "Construcción de estructuras metálicas para edificios de gran altura"
+       },
+       {
+          "id": "15",
+          "tipo": "Soldadura TIG",
+          "material": "Titanio",
+          "aplicacion": "Fabricación de componentes para la industria aeroespacial"
+       },
+       {
+          "id": "16",
+          "tipo": "Soldadura MIG",
+          "material": "Acero inoxidable",
+          "aplicacion": "Construcción de mobiliario urbano"
+       },
+       {
+          "id": "17",
+          "tipo": "Soldadura por arco sumergido",
+          "material": "Acero al carbono",
+          "aplicacion": "Fabricación de estructuras metálicas para parques industriales"
+       },
+       {
+          "id": "18",
+          "tipo": "Soldadura TIG",
+          "material": "Cobre",
+          "aplicacion": "Fabricación de componentes electrónicos"
+       },
+       {
+          "id": "19",
+          "tipo": "Soldadura MIG",
+          "material": "Acero galvanizado",
+          "aplicacion": "Construcción de vallas de seguridad en carreteras"
+       },
+       {
+          "id": "20",
+          "tipo": "Soldadura de electrodo revestido (SMAW)",
+          "material": "Hierro forjado",
+          "aplicacion": "Restauración de estructuras antiguas"
+       }
+    ]
+ }
