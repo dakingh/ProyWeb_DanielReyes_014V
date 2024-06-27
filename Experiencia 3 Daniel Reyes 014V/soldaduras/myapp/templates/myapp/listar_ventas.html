@@ -1,0 +1,36 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+{% load humanize %}
+<h2 class="text-center my-4">Lista de Ventas Realizadas</h2>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Usuario</th>
+                            <th>Fecha de Compra</th>
+                            <th>Total</th>
+                            <th>Detalles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for carrito in carritos %}
+                        <tr>
+                            <td>{{ carrito.usuario.username }}</td>
+                            <td>{{ carrito.fecha_compra }}</td>
+                            <td>${{ carrito.mostrar_informacion_compra.total|floatformat:2|intcomma }}</td>
+                            <td>
+                                <a href="{% url 'informacion_carrito' carrito.id %}" class="btn btn-info btn-sm">Ver Detalles</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

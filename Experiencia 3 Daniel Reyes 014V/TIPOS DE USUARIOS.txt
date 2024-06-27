@@ -1,0 +1,11 @@
+Admin:
+User: Daniel
+Pw: asdasd123
+
+Cliente:
+User: Cliente
+Pw: duocduocduoc123
+
+Empleados:
+User: Empleado
+Pw: duocduocduoc123

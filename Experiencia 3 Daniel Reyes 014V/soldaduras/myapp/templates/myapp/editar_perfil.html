@@ -1,0 +1,61 @@
+{% extends "myapp/base.html" %}
+
+{% block content %}
+<div style="margin-top: 1rem; margin-bottom: 1rem; display: flex; justify-content: center; padding: 1rem;">
+    <div style="width: 100%; max-width: 600px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden;">
+        <div style="background-color: #007bff; color: white; padding: 1rem; text-align: center;">
+            <h2 style="margin: 0;">Editar Perfil</h2>
+        </div>
+        <div style="padding: 2rem; background-color: #f9f9f9;">
+            <form method="POST" style="display: flex; flex-direction: column; align-items: center;">
+                {% csrf_token %}
+                <div style="margin-bottom: 1.5rem; width: 100%;">
+                    <label for="username" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Nombre de usuario</label>
+                    <div style="display: flex; flex-direction: column;">
+                        {{ form.username }}
+                        <small style="color: #6c757d;">Requerido. 150 caracteres como máximo. Únicamente letras, dígitos y @/./+/-/_</small>
+                    </div>
+                </div>
+                <div style="margin-bottom: 1.5rem; width: 100%;">
+                    <label for="first_name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Nombre</label>
+                    <div style="display: flex; flex-direction: column;">
+                        {{ form.first_name }}
+                    </div>
+                </div>
+                <div style="margin-bottom: 1.5rem; width: 100%;">
+                    <label for="last_name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Apellidos</label>
+                    <div style="display: flex; flex-direction: column;">
+                        {{ form.last_name }}
+                    </div>
+                </div>
+                <div style="margin-bottom: 1.5rem; width: 100%;">
+                    <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Dirección de correo electrónico</label>
+                    <div style="display: flex; flex-direction: column;">
+                        {{ form.email }}
+                    </div>
+                </div>
+                <div style="margin-bottom: 1.5rem; width: 100%;">
+                    <label for="password" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Contraseña</label>
+                    <div style="display: flex; flex-direction: column;">
+                        {{ form.password }}
+                    </div>
+                </div>
+                <div style="margin-bottom: 1.5rem; width: 100%;">
+                    <label for="password_confirm" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Contraseña (confirmación)</label>
+                    <div style="display: flex; flex-direction: column;">
+                        {{ form.password_confirm }}
+                    </div>
+                    <small style="color: #6c757d;">Para verificar, introduzca la misma contraseña anterior.</small>
+                </div>
+                <div style="text-align: center; width: 100%;">
+                    <button type="submit" style="background-color: #28a745; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem;">Guardar cambios</button>
+                </div>
+                <div style="text-align: center; width: 100%; margin-top: 1rem;">
+                    <a href="{% url 'index' %}" style="color: #007bff; text-decoration: none;">Ir al home</a> | 
+                    <a href="{% url 'login' %}" style="color: #007bff; text-decoration: none;">Iniciar Sesión</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

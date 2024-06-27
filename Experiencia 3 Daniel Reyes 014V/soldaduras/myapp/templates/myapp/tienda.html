@@ -1,0 +1,41 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<h2 class="text-center my-4">Productos</h2>
+<div class="container">
+    <div class="row justify-content-center">
+        {% for p in productos %}
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="card h-100 shadow-sm">
+                {% if p.imagen %}
+                <img src="{{ p.imagen.url }}" class="card-img-top" alt="imagen producto" style="height: 200px; object-fit: cover;">
+                {% endif %}
+                <div class="card-body text-center">
+                    <h5 class="card-title text-secondary">{{ p.marca | capfirst }}</h5>
+                    <h2 class="card-text text-dark" style="font-size: 1.2em;">{{ p.nombre | title }}</h2>
+                    <p class="text-muted">Stock: <span class="stock">{{ p.stock }}</span></p>
+                    <h3 class="text-danger precio">${{ p.precio | floatformat:0 }}</h3>
+                    {% if p.stock > 0 %}
+                    <a href="{% url 'agregar_al_carrito' p.id %}" class="btn btn-primary mt-2">Agregar al Carrito</a>
+                    {% else %}
+                    <button class="btn btn-secondary mt-2" disabled>Stock Insuficiente</button>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<script>
+    //Script para mostrar el precio en formato clp
+    document.addEventListener("DOMContentLoaded", function() {
+        const precios = document.querySelectorAll('.precio');
+        precios.forEach(function(precio) {
+            let valor = precio.textContent.replace('$', '').replace(/,/g, '');
+            valor = parseInt(valor).toLocaleString('es-ES');
+            precio.textContent = `$${valor}`;
+        });
+    });
+</script>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'myapp/base.html' %}
+{% load humanize %}
+
+{% block content %}
+<h2 class="text-center my-4">Carrito de Compras</h2>
+<div class="container">
+    <div class="row justify-content-center">
+        {% if carrito.detalles.all %}
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for detalle in carrito.detalles.all %}
+                    <tr>
+                        <td>{{ detalle.producto.nombre }}</td>
+                        <td>{{ detalle.cantidad }}</td>
+                        <td class="precio">${{ detalle.precio }}</td>
+                        <td class="subtotal">${{ detalle.subtotal }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="text-right mt-4">
+            <h3>Total: $<span id="total">{{ total }}</span></h3>
+            <form method="post" action="{% url 'comprar_carrito' carrito.id %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-success">Comprar</button>
+            </form>
+        </div>
+        {% else %}
+        <p class="text-center">Tu carrito está vacío.</p>
+        {% endif %}
+    </div>
+    <br>
+    <br>
+</div>
+
+<script>
+    function formatNumber(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+
+    document.querySelectorAll('.precio, .subtotal').forEach(function(element) {
+        element.textContent = formatNumber(element.textContent.replace('$', ''));
+    });
+
+    document.getElementById('total').textContent = formatNumber(document.getElementById('total').textContent);
+</script>
+{% endblock %}

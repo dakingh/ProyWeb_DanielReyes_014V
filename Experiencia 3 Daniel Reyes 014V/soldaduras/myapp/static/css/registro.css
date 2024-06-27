@@ -1,0 +1,125 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box; 
+}
+
+nav{
+    position: sticky;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: aliceblue;
+}
+
+button:hover{
+    background: rgba(0,0,0,.5);
+}
+
+.oscuro{
+    color: white;
+    background-color: black;
+}
+
+header{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#menu a{
+    border-radius: 20px;
+    padding: 2px 10px;
+}
+
+header ul li a:hover{
+    background-color: rgb(230, 159, 6);
+    transition: 0.6s;
+}
+
+
+.form-control{
+    margin-bottom: 10px;
+}
+
+form{
+    width: 500px;
+    padding: 20px;
+    margin: 20px;
+    border: 5px solid #ffbb00;
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+label{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    clear:both;
+    float:left;
+
+}
+.error-label{
+    border:1px solid red;
+}
+
+label.error{
+    color:red;
+    font-size: 0.8em;
+    margin-top: -5px;
+}
+
+.footer-logo{
+    width: auto;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-texto{
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.iconos-redes-sociales a{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales i{
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+
+.derechos{
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+}

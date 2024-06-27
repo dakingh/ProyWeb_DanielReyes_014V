@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box; 
+}
+
+nav{
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: aliceblue;
+}
+
+.oscuro{
+    color: white;
+    background-color: black;
+}
+
+button:hover{
+    background: rgba(0,0,0,.5);
+}
+
+header{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#menu a{
+    border-radius: 20px;
+    padding: 2px 10px;
+}
+
+header ul li a:hover{
+    background-color: rgb(230, 159, 6);
+    transition: 0.6s;
+}
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+#hero h1 {
+    position: relative;
+    color: white;
+    z-index: 2;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    );
+    z-index: 1;
+}
+
+.materiales{
+    padding: 60px;
+}
+
+.materiales img{
+    width: auto;
+    height: 120px;
+}
+
+.materiales .columna{
+    padding: 20px;
+    border: 2px solid rgb(138, 138, 138);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+} 
+
+.materiales-titulo{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.badge-container{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.youtube{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: auto;
+    height: auto;
+    margin: 20px auto;
+}
+
+.footer-logo{
+    width: auto;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.footer-texto{
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.iconos-redes-sociales a{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales i{
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+
+.derechos{
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+}
+
+
+
+
+
+
